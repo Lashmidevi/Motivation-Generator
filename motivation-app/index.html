@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Your Mood</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>✨ How Are You Feeling Today? ✨</h1>
+    <div class="mood-buttons">
+      <button onclick="goToQuote('happy')">😊 Happy</button>
+      <button onclick="goToQuote('sad')">😢 Sad</button>
+      <button onclick="goToQuote('stressed')">😰 Stressed</button>
+      <button onclick="goToQuote('motivated')">💪 Motivated</button>
+      
+    </div>
+  </div>
+
+  <script>
+    function goToQuote(mood) {
+      window.location.href = `quote.html?mood=${mood}`;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Quote</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Your Motivational Quote</h2>
+    <div class="quote-box">
+      <p id="quote">Loading quote...</p>
+    </div>
+    <button onclick="window.location.href='index.html'">⬅️ Back</button>
+  </div>
+
+  <script src="script.js"></script>
+    <script>
+        // Get mood from URL
+        const params = new URLSearchParams(window.location.search);
+        const mood = params.get('mood');
+        if (mood) {
+            updateQuote(mood); // This calls your existing function in script.js
+        } else {
+            document.getElementById('quote').textContent = "No mood selected.";
+        }
+  </script>
+</body>
+</html>

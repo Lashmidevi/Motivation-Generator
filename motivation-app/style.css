@@ -1,0 +1,81 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(145deg, #dfe9f3, #ffffff);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+h1, h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.mood-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+button {
+  padding: 0.8rem 1.4rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #5b8cff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3a6ee8;
+}
+
+.quote-box {
+  background: #f5f7fa;
+  border-left: 4px solid #5b8cff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  color: #444;
+  font-size: 1.2rem;
+  margin: 1rem 0 1.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+body.happy {
+  background: linear-gradient(to right, #fffbd5, #b20a2c);
+  color: #222;
+}
+body.sad {
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  color: #003366;
+}
+body.stressed {
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  color: #333;
+}
+body.motivated {
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  color: #fff;
+}
